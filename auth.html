@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masuk / Daftar Reseller | Supa Topup</title>
+<meta name="description" content="Masuk atau daftar gratis Supa Topup. Upgrade ke Reseller: harga grosir 3–8%, dashboard, API, tanpa deposit.">
+<meta name="theme-color" content="#05070f">
+<link rel="canonical" href="https://supatopup.id/auth.html">
+<meta property="og:image" content="img/wuwa.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237b5cff'/><text x='50' y='68' font-size='52' text-anchor='middle'>👤</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script src="js/data.js"></script>
+<script type="module" src="js/fx.js"></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">⚡</span><span>Supa Topup<small>PPOB • GAME TOPUP</small></span></a>
+<nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+<a href="index.html">Beranda</a><a href="topup.html">Top Up Game</a><a href="produk.html">PPOB</a><a href="lacak.html">Lacak Transaksi</a><a href="bantuan.html">Bantuan</a>
+</nav>
+<div class="nav-cta"><button class="hamburger" id="menuBtn" aria-label="Buka menu">☰</button></div>
+</div></header>
+
+<main id="main" class="container"><section class="section">
+<div class="auth">
+  <div class="auth-art">
+    <div class="grid4" aria-hidden="true">
+      <img src="img/ml.jpg" alt="" width="270" height="338"><img src="img/wuwa.jpg" alt="" width="270" height="338">
+      <img src="img/ff.jpg" alt="" width="270" height="338"><img src="img/hsrr.jpg" alt="" width="270" height="338">
+    </div>
+    <div class="cap"><p class="eyebrow" style="margin:0 0 6px">🤝 MORE THAN 40.000 SELLERS</p>
+    <h2 style="margin:0 0 6px;font-size:26px">Jualan diamond & pulsa,<br>untung tiap hari.</h2>
+    <p style="margin:0;color:#c3cde8;font-size:14px">Harga grosir, satu dashboard untuk game + PPOB, dan support 24/7.</p></div>
+  </div>
+
+  <div class="auth-form">
+    <h2 style="margin-top:0">🔐 Masuk / Daftar</h2>
+    <p class="hint">Mode demo front-end — data tersimpan lokal di perangkat, tanpa server.</p>
+    <form onsubmit="return authSubmit(event)" novalidate>
+      <label class="hint"><b>NAMA LENGKAP</b></label><input class="field" id="aName" placeholder="cth: Budi Santoso" required autocomplete="name">
+      <label class="hint"><b>NOMOR WHATSAPP</b></label><input class="field" id="aPhone" placeholder="08xxxxxxxxxx" required inputmode="numeric" pattern="0[0-9]{9,14}" autocomplete="tel">
+      <label class="hint"><b>PIN 6 DIGIT</b></label><input class="field" id="aPin" type="password" inputmode="numeric" placeholder="••••••" required pattern="[0-9]{6}" autocomplete="new-password">
+      <label class="hint" style="margin-top:12px;display:block"><input type="checkbox" id="aReseller"> Daftar sebagai <b>Reseller</b> — harga grosir 3–8%</label>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:16px">Masuk / Daftar →</button>
+    </form>
+    <p class="hint" id="authInfo" role="status"></p>
+    <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+    <h3 id="reseller" style="margin:0 0 10px;font-size:16px">🤝 Level &amp; Keuntungan</h3>
+    <table class="table"><thead><tr><th>Level</th><th>Syarat</th><th>Diskon</th></tr></thead>
+    <tbody><tr><td>Member</td><td>Gratis</td><td>Harga normal</td></tr>
+    <tr><td>Reseller</td><td>Verif WhatsApp</td><td>3–5%</td></tr>
+    <tr><td>Agen</td><td>50 transaksi/bln</td><td>s/d 8% + API</td></tr></tbody></table>
+    <a class="btn btn-ghost btn-block" href="produk.html" style="margin-top:12px">Lihat Katalog Grosir</a>
+  </div>
+</div>
+</section></main>
+
+<footer><div class="copy container"><span>© <span id="year"></span> Supa Topup</span><span><a href="index.html">← Beranda</a></span></div></footer>
+<div id="toast" aria-live="polite"></div>
+</body>
+</html>

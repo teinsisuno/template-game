@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Top Up Game Termurah — ML, FF, Genshin, Valorant, WuWa | Supa Topup</title>
+<meta name="description" content="Katalog 120+ game: Mobile Legends, Free Fire, Genshin Impact, Wuthering Waves, Honkai, ZZZ, Valorant, PUBG, CODM, Roblox. Pilih nominal, cek nickname, bayar QRIS — item masuk 3 detik.">
+<meta name="theme-color" content="#05070f">
+<link rel="canonical" href="https://supatopup.id/topup.html">
+<meta property="og:image" content="img/ff.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237b5cff'/><text x='50' y='68' font-size='52' text-anchor='middle'>🎮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script src="js/data.js"></script>
+<script type="module" src="js/fx.js"></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">⚡</span><span>Supa Topup<small>PPOB • GAME TOPUP</small></span></a>
+<nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+<a href="index.html">Beranda</a><a href="topup.html" class="active">Top Up Game</a><a href="produk.html">PPOB</a><a href="lacak.html">Lacak Transaksi</a><a href="bantuan.html">Bantuan</a>
+</nav>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="auth.html">Masuk</a><a class="btn btn-primary btn-sm" href="#detail">Order ⚡</a><button class="hamburger" id="menuBtn" aria-label="Buka menu">☰</button></div>
+</div></header>
+
+<main id="main">
+<section class="pagehead container">
+  <div data-fx="mist" style="position:absolute;inset:-40px 0 0;z-index:-1;pointer-events:none"><canvas style="width:100%;height:100%"></canvas></div>
+  <p class="eyebrow">🎮 GAME STORE</p>
+  <h1 style="font-size:clamp(30px,4.6vw,46px);margin:8px 0 6px">Top Up Game <span class="grad-c">Instan & Bergaransi</span></h1>
+  <p class="lead">Pilih game → masukkan ID → cek nickname → bayar. Semua otomatis, tanpa login.</p>
+  <form class="searchbar" role="search" onsubmit="return false" style="max-width:560px"><input id="catQ" type="search" placeholder="Cari game / voucher…" aria-label="Cari game"><button class="btn btn-primary" type="button" aria-label="Cari">🔍</button></form>
+  <div class="rail" id="catRail" aria-label="Game populer"></div>
+</section>
+
+<section class="section container" style="padding-top:6px">
+  <div class="filters" id="catFilter">
+    <button class="fbtn active" data-f="all">Semua</button><button class="fbtn" data-f="moba">MOBA</button><button class="fbtn" data-f="battle">Battle Royale</button><button class="fbtn" data-f="rpg">RPG / Gacha</button><button class="fbtn" data-f="voucher">Voucher</button>
+  </div>
+  <div class="grid" id="catalog"></div>
+</section>
+
+<section class="section container" id="detail" style="padding-top:6px">
+  <div class="panel">
+    <div class="sec-head"><div><h2 id="dTitle" style="display:flex;align-items:center">💎 Detail Top Up</h2><p id="dDesc">Klik “Top Up” pada game di atas untuk memuat harga & formulir.</p></div><span class="status ok">● Stok tersedia</span></div>
+    <div class="split">
+      <div>
+        <label class="hint"><b>USER ID / CHAR ID</b></label><input class="field" id="dId" placeholder="cth: 512345678 (tanpa spasi)" autocomplete="off"><span class="ok-txt" id="nick" aria-live="polite"></span>
+        <div class="row2">
+          <div><label class="hint"><b>SERVER / ZONE</b></label><input class="field" id="dServer" placeholder="cth: 2201 / Asia" autocomplete="off"></div>
+          <div><label class="hint"><b>WHATSAPP (invoice)</b></label><input class="field" id="dWa" placeholder="08xx-xxxx-xxxx" inputmode="tel" autocomplete="tel"></div>
+        </div>
+        <label class="hint"><b>KODE PROMO</b></label><input class="field" id="dPromo" placeholder="GAMER30 = potongan 30% (maks Rp15rb)" autocomplete="off">
+        <p class="hint" style="margin-top:14px">🛡️ <b>Garansi:</b> item tidak masuk &gt;15 menit → resend atau refund 100%. Cek nama akun Anda di game sebelum membayar.</p>
+      </div>
+      <div>
+        <label class="hint"><b>PILIH NOMINAL</b></label><div class="nom-grid" id="dNoms"></div>
+        <label class="hint" style="margin-top:12px"><b>METODE BAYAR</b></label><div class="pay-list" id="dPays"></div>
+        <div class="total"><span class="hint">Total<br><b id="dTotal">Rp0</b></span><button class="btn btn-primary" onclick="detailCheckout()">Bayar Sekarang →</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="band"><img class="bg" src="img/genshin.jpg" alt="" loading="lazy" width="1200" height="420">
+  <div class="inner"><div><h2>⚡ Butuh bantuan memilih nominal?</h2><p>CS kami paham semua game — konsultasi gratis 24/7 sebelum atau sesudah transaksi.</p></div><a class="btn btn-ghost" href="bantuan.html#kontak">Chat CS 💬</a></div></div>
+</section>
+</main>
+
+<footer><div class="copy container"><span>© <span id="year"></span> Supa Topup</span><span><a href="index.html">← Kembali ke beranda</a> • <a href="lacak.html">Lacak pesanan</a></span></div></footer>
+
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true"><div class="sheet">
+<h3 style="margin-top:0">🧾 Konfirmasi Pesanan</h3><div class="invoice" id="invoiceBox"></div>
+<div style="display:flex;gap:10px;margin-top:14px"><button class="btn btn-ghost no-print" onclick="closeModal()">Batal</button><button class="btn btn-primary btn-block" onclick="payNow()">Saya Sudah Bayar ✓</button></div>
+</div></div>
+<div id="toast" aria-live="polite"></div>
+</body>
+</html>

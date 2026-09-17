@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Supa Topup — Top Up Game Termurah & PPOB Lengkap | ML, FF, Genshin, PLN, Pulsa</title>
+<meta name="description" content="Top up Mobile Legends, Free Fire, Genshin, Wuthering Waves, Valorant mulai Rp1.000. Item masuk 3 detik, bayar QRIS/e-wallet/VA/retail. Plus PPOB: pulsa, data, PLN, PDAM, BPJS, e-money.">
+<meta name="theme-color" content="#05070f">
+<link rel="canonical" href="https://supatopup.id/">
+<meta property="og:title" content="Supa Topup — Top Up Game Instan + PPOB"><meta property="og:description" content="Diamond & voucher game termurah, 40+ metode bayar, garansi refund 100%."><meta property="og:type" content="website"><meta property="og:image" content="img/ml.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237b5cff'/><text x='50' y='68' font-size='52' text-anchor='middle'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script src="js/data.js"></script>
+<script type="module" src="js/fx.js"></script>
+<script src="js/main.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Supa Topup","url":"https://supatopup.id","currenciesAccepted":"IDR","paymentAccepted":"QRIS, E-Wallet, Virtual Account, Retail"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">⚡</span><span>Supa Topup<small>PPOB • GAME TOPUP</small></span></a>
+<nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+<a href="index.html" class="active">Beranda</a><a href="topup.html">Top Up Game</a><a href="produk.html">PPOB</a><a href="lacak.html">Lacak Transaksi</a><a href="bantuan.html">Bantuan</a>
+</nav>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="auth.html">Masuk</a><a class="btn btn-primary btn-sm" href="topup.html">Top Up ⚡</a>
+<button class="hamburger" id="menuBtn" aria-label="Buka menu">☰</button></div>
+</div></header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-fx" data-fx="hero"><canvas id="fx-hero" aria-hidden="true"></canvas></div>
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">⚡ PLATFORM TOP UP #1 INDONESIA</p>
+      <h1>Top Up Game <span class="grad">Tanpa Drama.</span><br><span class="grad-c">Item Masuk 3 Detik.</span></h1>
+      <p class="lead">Diamond ML, FF, Genshin, Wuthering Waves hingga Valorant mulai <b>Rp1.000</b>. Bayar QRIS, e-wallet, VA bank, atau retail — <b>tanpa login akun game</b>, bergaransi refund 100%.</p>
+      <div class="hero-stats">
+        <div class="stat"><b>2,4 Jt+</b><span>Transaksi sukses</span></div>
+        <div class="stat"><b>4.9 ★</b><span>38rb ulasan</span></div>
+        <div class="stat"><b>120+</b><span>Game & produk PPOB</span></div>
+        <div class="stat"><b>24/7</b><span>CS fast respon</span></div>
+      </div>
+      <form class="searchbar" role="search" onsubmit="return goSearch(this)"><input id="q" type="search" placeholder="Cari game: mobile legends, ff, genshin…" aria-label="Cari game"><button class="btn btn-primary" type="submit">Cari 🔍</button></form>
+      <div class="trust"><i>✅ Berbadan hukum resmi</i><i>🔒 Privasi — tanpa password</i><i>🛡️ Garansi 100%</i><i>💳 40+ metode bayar</i></div>
+      <noscript><p class="hint">⚠️ Aktifkan JavaScript untuk transaksi top up.</p></noscript>
+    </div>
+    <div>
+      <div class="topup-card" aria-label="Formulir top up cepat">
+        <div class="topup-covers" aria-hidden="true"><img src="img/ml.jpg" alt="" width="50" height="50"><img src="img/ff.jpg" alt="" width="50" height="50"><img src="img/genshin.jpg" alt="" width="50" height="50"><img src="img/wuwa.jpg" alt="" width="50" height="50"><img src="img/zzz.jpg" alt="" width="50" height="50"><img src="img/pubg.jpg" alt="" width="50" height="50"></div>
+        <div class="topup-head"><b>⚡ Top Up Cepat</b><span id="svcStatus">● Server Normal</span></div>
+        <div class="steps">
+          <div class="step"><label><em>1</em> Pilih game</label><div class="chips" id="quickGames" role="group" aria-label="Pilih game"></div></div>
+          <div class="step"><label><em>2</em> ID akun</label><div class="row2"><input class="field" id="quickId" placeholder="User ID, cth: 12345678" autocomplete="off"><input class="field" id="quickServer" placeholder="Server (opsional)" autocomplete="off"></div></div>
+          <div class="step"><label><em>3</em> Nominal</label><div class="nom-grid" id="quickNoms"></div></div>
+          <div class="step"><label><em>4</em> Pembayaran</label><div class="pay-list" id="quickPays"></div></div>
+          <div class="total"><span class="hint">Total bayar<br><b id="quickTotal">Rp0</b></span><button class="btn btn-primary" onclick="quickCheckout()">Bayar Sekarang →</button></div>
+          <p class="hint">Invoice otomatis + garansi resend/refund bila gagal.</p>
+        </div>
+      </div>
+      <div class="hero-collage" aria-hidden="true"><img src="img/ml.jpg" alt="" width="120" height="150"><img src="img/ff.jpg" alt="" width="120" height="150"><img src="img/genshin.jpg" alt="" width="120" height="150"><img src="img/hsrr.jpg" alt="" width="120" height="150"><img src="img/wuwa.jpg" alt="" width="120" height="150"><img src="img/zzz.jpg" alt="" width="120" height="150"></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="gameMarquee"></div></div>
+<div class="marquee" style="margin-top:0" aria-hidden="true"><div class="marquee-track" id="payMarquee"><span>QRIS ⚡</span><span>GoPay</span><span>OVO</span><span>DANA</span><span>ShopeePay</span><span>BCA VA</span><span>BRI VA</span><span>Alfamart</span><span>Indomaret</span></div></div>
+
+<section class="section container">
+  <div class="sec-head"><div><p class="eyebrow">🏆 PEEK AT THE CHARTS</p><h2>Top 5 Minggu Ini</h2><p>Berdasarkan volume transaksi 7 hari terakhir — semuanya terkirim otomatis.</p></div></div>
+  <div class="grid" id="topRank" style="grid-template-columns:repeat(5,1fr)"></div>
+</section>
+
+<section class="section container" style="padding-top:8px">
+  <div class="sec-head"><div><p class="eyebrow">🎮 KATALOG GAME</p><h2>Game Paling Laris</h2><p>Diskon s/d 30% • bonus diamond tiap flash sale 19.00 WIB.</p></div><a class="link" href="topup.html">Lihat semua 120+ game →</a></div>
+  <div class="filters" id="gameFilter">
+    <button class="fbtn active" data-f="all">Semua</button><button class="fbtn" data-f="moba">MOBA</button><button class="fbtn" data-f="battle">Battle Royale</button><button class="fbtn" data-f="rpg">RPG</button><button class="fbtn" data-f="voucher">Voucher</button>
+  </div>
+  <div class="grid" id="homeGames"></div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="band"><img class="bg" src="img/hok.jpg" alt="" loading="lazy" width="1200" height="420">
+  <div class="inner"><div><h2>🏆 Turnamen Diamond Tiap Akhir Pekan</h2><p>Top up min. Rp50.000 otomatis ikut undian 1.000 diamond + saldo PPOB. Pemenang diumumkan Minggu 20.00 WIB.</p></div><a class="btn btn-hot" href="topup.html">Ikut Sekarang 🔥</a></div></div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="sec-head"><div><p class="eyebrow">💳 PPOB</p><h2>Bayar Tagihan & Pulsa Satu Atap</h2><p>Satu saldo untuk semua kebutuhan digital — pribadi maupun jualan kembali (margin s/d 8%).</p></div><a class="link" href="produk.html">Buka katalog PPOB →</a></div>
+  <div class="grid" id="homePpob" style="grid-template-columns:repeat(3,1fr)"></div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="how">
+    <div><b>01</b><h3>Pilih game / produk</h3><p>Cari di katalog lengkap, tanpa login akun game.</p></div>
+    <div><b>02</b><h3>Masukkan ID & nominal</h3><p>Cek nickname otomatis agar tidak salah kirim.</p></div>
+    <div><b>03</b><h3>Bayar 40+ metode</h3><p>QRIS, e-wallet, VA bank, retail — fee transparan.</p></div>
+    <div><b>04</b><h3>Item masuk 3 detik</h3><p>Invoice digital + garansi refund otomatis.</p></div>
+  </div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="split">
+    <div class="promo"><p class="eyebrow">🔥 FLASH SALE</p><h2 style="margin:0 0 6px">Kode: GAMER30</h2><p style="color:#cbd5e1;margin:0">Potongan 30% (maks Rp15.000) semua diamond, hari ini 19.00–21.00 WIB.</p>
+      <div class="count" aria-label="Hitung mundur">
+        <div><b id="cdH">--</b><span>Jam</span></div><div><b id="cdM">--</b><span>Menit</span></div><div><b id="cdS">--</b><span>Detik</span></div>
+      </div>
+      <a class="btn btn-primary" href="topup.html">Klaim Sekarang</a></div>
+    <div class="testi">
+      <div class="quote"><header><img src="img/ml.jpg" alt="Avatar Rizky" width="40" height="40"><div><b>Rizky A.</b><span>Player ML • Jakarta</span></div><span class="stars" style="margin-left:auto">★★★★★</span></header><p>“Dua kali top up, dua-duanya masuk <b>&lt;10 detik</b>. QRIS sat-set, nickname langsung kecek.”</p></div>
+      <div class="quote"><header><img src="img/zzz.jpg" alt="Avatar Sari" width="40" height="40"><div><b>Sari W.</b><span>Mitra Reseller • Bandung</span></div><span class="stars" style="margin-left:auto">★★★★★</span></header><p>“Jualan pulsa, token PLN & diamond dari satu dashboard. Margin aman, CS balas jam 2 pagi.”</p></div>
+      <div class="quote"><header><img src="img/valo.jpg" alt="Avatar Dimas" width="40" height="40"><div><b>Dimas P.</b><span>Valorant • Surabaya</span></div><span class="stars" style="margin-left:auto">★★★★★</span></header><p>“Salah masukkan ID, langsung dibantu CS & berhasil dialihkan. Not panicking at all.”</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="sec-head"><div><p class="eyebrow">❓ FAQ</p><h2>Pertanyaan Populer</h2></div><a class="link" href="bantuan.html">Pusat bantuan →</a></div>
+  <div class="faq">
+    <details open><summary>Apakah top up butuh password akun game?</summary><p>Tidak. Cukup User ID + Server. Kami tidak pernah meminta password/OTP — itu ciri penipuan.</p></details>
+    <details><summary>Berapa lama diamond masuk?</summary><p>Rata-rata 3–30 detik setelah bayar. Lebih dari 15 menit? Garansi resend atau refund 100%.</p></details>
+    <details><summary>Metode pembayaran apa saja tersedia?</summary><p>QRIS, GoPay, OVO, DANA, ShopeePay, BCA/BRI/Mandiri/BNI VA, Alfamart/Indomaret, kartu kredit & paylater.</p></details>
+    <details><summary>Bisa jadi reseller / dropship pulsa + game?</summary><p>Bisa, gratis. Dapat harga grosir, dashboard, dan API. Margin 3–8%.</p></details>
+  </div>
+</section>
+
+<section class="section container" style="padding-top:0"><div class="cta">
+  <h2 style="margin:0 0 8px;font-size:clamp(24px,4vw,38px)">Siap push rank malam ini? 🎮</h2>
+  <p style="color:#cbd5e1">Top up sekarang — diamond masuk sebelum matchmaking selesai.</p>
+  <a class="btn btn-primary" href="topup.html" style="font-size:16px;padding:14px 26px">Top Up Game ⚡</a>
+  <a class="btn btn-ghost" href="produk.html" style="margin-left:8px">Bayar Tagihan 💳</a>
+</div></section>
+</main>
+
+<footer><div class="container foot">
+<div><a class="logo" href="index.html"><span class="logo-mark">⚡</span><span>Supa Topup</span></a>
+<p>Platform top up game & PPOB cepat, murah, bergaransi.<br>PT Supa Topup Digital • Jakarta, Indonesia.</p>
+<form class="news" onsubmit="return newsSubmit(event)" aria-label="Newsletter"><input class="field" style="margin:0" type="email" placeholder="Email promo" required aria-label="Email"><button class="btn btn-primary btn-sm">OK</button></form></div>
+<div><h4>Produk</h4><a href="topup.html">Top Up Game</a><a href="produk.html">Pulsa & Paket Data</a><a href="produk.html">Token / Tagihan PLN</a><a href="produk.html">PDAM • BPJS • E-Money</a></div>
+<div><h4>Bantuan</h4><a href="lacak.html">Lacak Transaksi</a><a href="bantuan.html">FAQ</a><a href="bantuan.html#kontak">Hubungi CS 24/7</a><a href="bantuan.html#refund">Kebijakan Refund</a></div>
+<div><h4>Akun</h4><a href="auth.html">Masuk / Daftar</a><a href="auth.html#reseller">Jadi Reseller</a><a href="bantuan.html">Syarat & Ketentuan</a><a href="bantuan.html">Privasi</a></div>
+</div><div class="copy container"><span>© <span id="year"></span> Supa Topup. All rights reserved.</span><span>🔒 SSL • PCI-DSS • QRIS certified • UU PDP</span></div></footer>
+
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="invTitle"><div class="sheet">
+<h3 id="invTitle" style="margin-top:0">🧾 Konfirmasi Pesanan</h3><div class="invoice" id="invoiceBox"></div>
+<div style="display:flex;gap:10px;margin-top:14px"><button class="btn btn-ghost no-print" onclick="closeModal()">Batal</button><button class="btn btn-primary btn-block" onclick="payNow()">Saya Sudah Bayar ✓</button></div>
+</div></div>
+<div id="toast" aria-live="polite"></div>
+</body>
+</html>

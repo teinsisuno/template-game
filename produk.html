@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Katalog PPOB — Pulsa, Data, PLN, PDAM, BPJS, E-Money | Supa Topup</title>
+<meta name="description" content="Beli pulsa all operator, paket data, token & tagihan PLN, PDAM, BPJS Kesehatan, e-money, TV kabel, angsuran. Harga grosir reseller + kalkulator margin.">
+<meta name="theme-color" content="#05070f">
+<link rel="canonical" href="https://supatopup.id/produk.html">
+<meta property="og:image" content="img/roblox.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237b5cff'/><text x='50' y='68' font-size='52' text-anchor='middle'>💳</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script src="js/data.js"></script>
+<script type="module" src="js/fx.js"></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">⚡</span><span>Supa Topup<small>PPOB • GAME TOPUP</small></span></a>
+<nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+<a href="index.html">Beranda</a><a href="topup.html">Top Up Game</a><a href="produk.html" class="active">PPOB</a><a href="lacak.html">Lacak Transaksi</a><a href="bantuan.html">Bantuan</a>
+</nav>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="auth.html">Masuk</a><a class="btn btn-primary btn-sm" href="auth.html#reseller">Daftar Reseller</a><button class="hamburger" id="menuBtn" aria-label="Buka menu">☰</button></div>
+</div></header>
+
+<main id="main">
+<section class="pagehead container">
+  <div style="position:absolute;inset:-40px 0 0;z-index:-1;pointer-events:none" data-fx="mist"><canvas style="width:100%;height:100%"></canvas></div>
+  <p class="eyebrow">💳 PPOB — PAYMENT POINT ONLINE BANK</p>
+  <h1 style="font-size:clamp(30px,4.6vw,46px);margin:8px 0 6px">Semua Tagihan & Pulsa, <span class="grad">Satu Aplikasi</span></h1>
+  <p class="lead">Harga transparan, pembayaran 40+ metode, riwayat & invoice otomatis. Cocok untuk pribadi maupun <b>reseller</b> (margin s/d 8%).</p>
+</section>
+
+<section class="section container" style="padding-top:20px">
+  <div class="filters" id="ppobFilter">
+    <button class="fbtn active" data-f="all">Semua</button><button class="fbtn" data-f="pulsa">Pulsa, Data & Voucher</button><button class="fbtn" data-f="pln">PLN</button><button class="fbtn" data-f="air">Air & BPJS</button><button class="fbtn" data-f="money">E-Money, TV & Angsuran</button>
+  </div>
+  <div class="grid" id="ppobCatalog" style="grid-template-columns:repeat(3,1fr)"></div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="band"><img class="bg" src="img/roblox.jpg" alt="" loading="lazy" width="1200" height="420">
+  <div class="inner"><div><h2>🤝 Jadi Reseller — Mulai 0 Rupiah</h2><p>Dashboard penjualan, API, cetak struk, dan dukungan grup khusus. Tanpa deposit, tanpa target.</p></div><a class="btn btn-hot" href="auth.html#reseller">Daftar Gratis 🚀</a></div></div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="split">
+    <div class="panel"><h2 style="margin-top:0">🧮 Kalkulator Margin Reseller</h2><p class="hint">Geser slider untuk simulasi keuntungan jualan kembali.</p>
+      <label class="hint">Transaksi / hari: <b id="vTx">50</b></label><input type="range" id="rTx" min="5" max="500" value="50" style="width:100%;accent-color:var(--brand)">
+      <label class="hint">Rata-rata margin: <b id="vMg">Rp1.500</b></label><input type="range" id="rMg" min="500" max="5000" step="100" value="1500" style="width:100%;accent-color:var(--brand-2)">
+      <h3 style="margin-bottom:4px">Estimasi profit / bulan</h3><p style="font-size:30px;font-family:var(--fdisp);color:var(--gold);margin:0" id="profit">Rp2.250.000</p>
+      <a class="btn btn-primary" href="auth.html#reseller" style="margin-top:14px">Ambil Harga Grosir</a></div>
+    <div class="panel"><h3 style="margin-top:0">📊 Contoh harga grosir</h3>
+      <table class="table"><thead><tr><th>Produk</th><th>Modal</th><th>Harga pasar</th><th>Margin</th></tr></thead>
+      <tr><td>Pulsa 10 rb</td><td>Rp10.200</td><td>Rp12.000</td><td><span class="status ok">+Rp1.800</span></td></tr>
+      <tr><td>Token PLN 50 rb</td><td>Rp50.500</td><td>Rp53.000</td><td><span class="status ok">+Rp2.500</span></td></tr>
+      <tr><td>ML 86 💎</td><td>Rp19.000</td><td>Rp22.500</td><td><span class="status ok">+Rp3.500</span></td></tr>
+      <tr><td>BPJS Keluarga</td><td>admin Rp2.500</td><td>admin Rp5.000</td><td><span class="status ok">+Rp2.500</span></td></tr></table>
+      <p class="hint" style="margin-top:12px">✅ Semua produk dalam satu saldo. ⚡ Transaksi < 5 detik. 🛡️ Gagal = dana kembali otomatis.</p></div>
+  </div>
+</section>
+
+<section class="section container" style="padding-top:0">
+  <div class="how">
+    <div><b>01</b><h3>Daftar akun</h3><p>Verifikasi WhatsApp, aktifkan level Reseller.</p></div>
+    <div><b>02</b><h3>Isi saldo</h3><p>Top up via QRIS/VA, langsung terpakai semua produk.</p></div>
+    <div><b>03</b><h3>Jual / bayar</h3><p>Transaksi via dashboard, API, atau aplikasi kasir.</p></div>
+    <div><b>04</b><h3>Profit harian</h3><p>Laporan real-time + rekap komisi tiap bulan.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="copy container"><span>© <span id="year"></span> Supa Topup</span><span><a href="index.html">← Beranda</a> • <a href="lacak.html">Lacak transaksi</a></span></div></footer>
+
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true"><div class="sheet">
+<h3 style="margin-top:0">🧾 Konfirmasi Pesanan</h3><div class="invoice" id="invoiceBox"></div>
+<div style="display:flex;gap:10px;margin-top:14px"><button class="btn btn-ghost no-print" onclick="closeModal()">Batal</button><button class="btn btn-primary btn-block" onclick="payNow()">Saya Sudah Bayar ✓</button></div>
+</div></div>
+<div id="toast" aria-live="polite"></div>
+</body>
+</html>

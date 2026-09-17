@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lacak Transaksi & Invoice | Supa Topup</title>
+<meta name="description" content="Lacak status top up game & transaksi PPOB Supa Topup dengan nomor invoice SP-XXXXXX. Riwayat tersimpan otomatis di perangkat.">
+<meta name="theme-color" content="#05070f">
+<link rel="canonical" href="https://supatopup.id/lacak.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237b5cff'/><text x='50' y='68' font-size='52' text-anchor='middle'>🔎</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
+<script src="js/data.js"></script>
+<script type="module" src="js/fx.js"></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+<header class="header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">⚡</span><span>Supa Topup<small>PPOB • GAME TOPUP</small></span></a>
+<nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+<a href="index.html">Beranda</a><a href="topup.html">Top Up Game</a><a href="produk.html">PPOB</a><a href="lacak.html" class="active">Lacak Transaksi</a><a href="bantuan.html">Bantuan</a>
+</nav>
+<div class="nav-cta"><a class="btn btn-ghost btn-sm" href="auth.html">Masuk</a><button class="hamburger" id="menuBtn" aria-label="Buka menu">☰</button></div>
+</div></header>
+
+<main id="main">
+<section class="pagehead container">
+  <div style="position:absolute;inset:-40px 0 0;z-index:-1;pointer-events:none" data-fx="mist"><canvas style="width:100%;height:100%"></canvas></div>
+  <p class="eyebrow">🔎 ORDER TRACKING</p>
+  <h1 style="font-size:clamp(30px,4.6vw,46px);margin:8px 0 6px">Lacak <span class="grad-c">Pesanan Anda</span></h1>
+  <p class="lead">Masukkan nomor invoice (format <span class="kbd">SP-XXXXXXXX</span>) dari email/WhatsApp konfirmasi pembayaran.</p>
+</section>
+
+<section class="section container" style="padding-top:16px">
+  <div class="split">
+    <div class="panel">
+      <form class="searchbar" onsubmit="return trackSearch(event)" style="margin-top:0"><input id="trackQ" placeholder="SP-DEMO24…" aria-label="Nomor invoice" autocomplete="off"><button class="btn btn-primary">Lacak 🔎</button></form>
+      <p class="hint" style="margin-top:10px">Belum punya invoice? <button class="link" style="border:0;background:none;cursor:pointer;font:inherit;font-weight:800" onclick="loadDemo()">coba data demo →</button></p>
+      <div id="trackResult" aria-live="polite"></div>
+    </div>
+    <div class="panel">
+      <h3 style="margin-top:0">❓ Status transaksi</h3>
+      <ul class="prose" style="font-size:14px;margin:0;padding-left:18px">
+        <li><span class="status pending">Menunggu Pembayaran</span><br><small class="hint">Belum ada dana masuk. Bayar sebelum timer 30 menit habis.</small></li>
+        <li><span class="status ok">Sukses</span><br><small class="hint">Item sudah terkirim ke akun game / nomor tujuan.</small></li>
+        <li><span class="status fail">Gagal / Refund</span><br><small class="hint">Dana otomatis kembali ke saldo/metode asal maks. 1×24 jam.</small></li>
+      </ul>
+      <p class="hint" style="margin-top:14px">🛡️ Lebih dari 15 menit masih “Diproses”? Langsung <a class="link" href="bantuan.html#kontak">hubungi CS</a> dengan menyebutkan invoice.</p>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:16px">
+    <div class="sec-head"><div><h2>🧾 Riwayat Perangkat Ini</h2><p>Tersimpan lokal (localStorage) — tidak dikirim ke server mana pun. Bisa dihapus kapan saja.</p></div>
+    <button class="btn btn-ghost btn-sm no-print" onclick="clearHistory()">Hapus riwayat 🗑</button></div>
+    <div style="overflow:auto"><table class="table"><caption class="hint" style="text-align:left;padding-bottom:8px">Sepuluh transaksi terakhir di browser ini</caption>
+    <thead><tr><th scope="col">Invoice</th><th scope="col">Produk</th><th scope="col">ID / Nomor</th><th scope="col">Total</th><th scope="col">Status</th><th scope="col">Aksi</th></tr></thead>
+    <tbody id="historyBody"></tbody></table></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="copy container"><span>© <span id="year"></span> Supa Topup</span><span><a href="index.html">← Beranda</a> • <a href="topup.html">Top up lagi ⚡</a></span></div></footer>
+<div id="toast" aria-live="polite"></div>
+</body>
+</html>
